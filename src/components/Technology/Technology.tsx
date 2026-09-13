@@ -17,6 +17,7 @@ const Technology = ({ technologyPromise }: TechnologyProps) => {
     return (
         <div className="container mx-auto max-w-300 p-5 sm:p-0">
             <div className="text-center sm:text-left">
+
                 <h1 className="text-[26px] sm:text-3xl font-bold">Explore the <span className="text-[27px] sm:text-[32px] bg-linear-30 from-[#FD5526] via-[#C1239B] to-[#8537E3] bg-clip-text text-transparent">Technologies</span></h1>
                 <p>Pick one technology per category to build your ideal stack.</p>
             </div>
@@ -30,6 +31,7 @@ const Technology = ({ technologyPromise }: TechnologyProps) => {
                                     addStack={addStack}
                                     setAddStack={setAddStack}
                                     />
+                                    
                             )
                         })
                     }

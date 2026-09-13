@@ -4,7 +4,8 @@ import Banner from "./components/Banner"
 import Technology from "./components/Technology/Technology"
 import type { TechnologyType } from "./type"
 import Footer from "./components/Footer"
-
+import { ToastContainer } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 
 function App() {
   const technologyFetch = async (): Promise<TechnologyType[]> => {
@@ -18,10 +19,12 @@ function App() {
     <>
       <Nav />
       <Banner />
-  <Suspense fallback={<p>Loading....</p>}>
+      <Suspense fallback={<p>Loading....</p>}>
+      
         <Technology technologyPromise={technologyPromise}/>
       </Suspense>
       <Footer />
+      <ToastContainer />
     </>
   )
 }

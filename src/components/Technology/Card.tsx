@@ -15,7 +15,7 @@ const Card = ({ tech, addStack, setAddStack }: CardProps) => {
     );
 
     const handleSelectedCard = () => {
-        toast.success("Stack selected successfully.", {
+        toast.success(`${tech.name} added to stack successfully.`, {
             position: "bottom-right",
             autoClose: 1000,
             hideProgressBar: false,
@@ -50,17 +50,17 @@ const Card = ({ tech, addStack, setAddStack }: CardProps) => {
 
     return (
         <div
-            className={`card bg-base-100 border ${
-                isSelected ? "border-black shadow-md" : "border-gray-200/80"
-            } w-full p-6 shadow-sm rounded-2xl transition-all flex flex-col justify-between`}
+            className={`card bg-base-100 border ${isSelected ? "border-black shadow-md" : "border-gray-200/80"
+                } w-full p-6 shadow-sm rounded-2xl transition-all flex flex-col justify-between`}
         >
             <div>
                 <div className="flex justify-between items-center">
-                    <img 
-                        src={tech.icon} 
-                        className="w-10 h-10 object-contain" 
-                        alt={tech.name} 
+                    <img
+                        src={tech.icon}
+                        className="w-10 h-10 object-contain"
+                        alt={tech.name}
                     />
+                    
                     <span
                         style={{ backgroundColor: bg, color: text }}
                         className="font-semibold text-xs px-3 py-1 rounded-full whitespace-nowrap"
@@ -73,6 +73,7 @@ const Card = ({ tech, addStack, setAddStack }: CardProps) => {
                     <h2 className="card-title font-bold text-xl sm:text-2xl text-gray-900">
                         {tech.name}
                     </h2>
+
                     <p className="text-gray-500 text-sm mt-2 mb-4 leading-relaxed">
                         {tech.description}
                     </p>
@@ -87,6 +88,7 @@ const Card = ({ tech, addStack, setAddStack }: CardProps) => {
                     <span className="text-gray-500 text-xs sm:text-sm font-medium">
                         {tech.difficulty}
                     </span>
+
                     <span className="text-amber-500 text-xs sm:text-sm font-bold flex items-center gap-1">
                         <img className="w-4 h-4" src={star} alt="star" /> {tech.rating.toFixed(1)}
                     </span>
@@ -95,11 +97,10 @@ const Card = ({ tech, addStack, setAddStack }: CardProps) => {
                 <button
                     onClick={handleSelectedCard}
                     disabled={isSelected}
-                    className={`btn w-full rounded-xl font-semibold text-white transition-all cursor-pointer ${
-                        isSelected
+                    className={`btn w-full rounded-xl font-semibold text-white transition-all cursor-pointer ${isSelected
                             ? "bg-[#C9CCD5] text-gray-700 cursor-not-allowed border-none"
                             : "bg-[#0A0F1D] hover:bg-gray-800 border-none"
-                    }`}
+                        }`}
                 >
                     {isSelected ? "Added to Stack" : "Add to Stack"}
                 </button>
