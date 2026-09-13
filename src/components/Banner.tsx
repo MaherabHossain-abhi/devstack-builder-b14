@@ -12,9 +12,10 @@ const Banner = () => {
                         compare them side by side, and put together the stack that fits your
                         next project.
                     </p>
+                    
                     <div className="flex justify-center sm:justify-start gap-4 mt-8">
-                        <button className="btn rounded-xl bg-linear-100 from-[#F87020] to-[#ED4B91] text-white">Explore Technologies</button>
-                        <button className="btn rounded-xl">Learn More</button>
+                        <a href="#technologies" className="btn rounded-xl bg-linear-100 from-[#F87020] to-[#ED4B91] text-white hover:brightness-110 transition-all duration-300">Explore Technologies</a>
+                        <a href="#about" className="btn rounded-xl hover:bg-gray-100 transition-all duration-300">Learn More</a>
                     </div>
                 </div>
                 <img className="w-100 sm:flex sm:justify-self-end" src={bannerImg} alt="Banner" />
