@@ -15,8 +15,8 @@ const Nav = () => {
                     <li><a href="#">Contact</a></li>
                 </ul>
                 <div className="flex gap-1 sm:gap-2">
-                    <button className="btn bg-white rounded-full btn-sm sm:btn-md hover:bg-gray-100 transition-all duration-300 cursor-pointer">Sign In</button>
-                    <button className="btn btn-sm sm:btn-md rounded-full text-white bg-linear-to-r from-[#FD5526] to-[#D91B7E] hover:brightness-110 transition-all duration-300 cursor-pointer">Sign Up</button>
+                    <button className="btn bg-white rounded-full btn-sm sm:btn-md hover:bg-gray-100 transition-all duration-300 cursor-pointer"><a href="#">Sign In</a></button>
+                    <button className="btn btn-sm sm:btn-md rounded-full text-white bg-linear-to-r from-[#FD5526] to-[#D91B7E] hover:brightness-110 transition-all duration-300 cursor-pointer"><a href="#">Sign Up</a></button>
                 </div>
             </div>
 

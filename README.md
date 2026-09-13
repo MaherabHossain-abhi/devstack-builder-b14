@@ -76,7 +76,7 @@ src/
 ├── type/         # TypeScript interfaces and global type definitions
 ├── App.tsx       # Root component and primary state management container
 ├── main.tsx      # Application entry point
-└──etc 
+└─etc. 
 
 ```
 

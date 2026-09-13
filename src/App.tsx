@@ -20,7 +20,7 @@ function App() {
       <Nav />
       <Banner />
       <Suspense fallback={<p>Loading....</p>}>
-      
+
         <Technology technologyPromise={technologyPromise}/>
       </Suspense>
       <Footer />
@@ -28,5 +28,6 @@ function App() {
     </>
   )
 }
+
 
 export default App
