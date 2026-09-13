@@ -5,10 +5,13 @@ const Footer = () => {
     const year = data.getFullYear();
 
     return (
+        
         <footer className="container mx-auto max-w-300 my-20 px-5 sm:px-0">
             <div className="flex flex-col sm:flex-row sm:justify-between items-start gap-5 mb-10">
                 <div className="text-center sm:text-left">
-                    <img className="mb-5 w-40 sm:w-42 mx-auto sm:mx-0" src={footerImg} alt="" />
+                    <a href="/">
+                        <img className="mb-5 w-40 sm:w-42 mx-auto sm:mx-0 cursor-pointer" src={footerImg} alt="Logo" />
+                    </a>
                     <p className="mb-5 text-gray-500 w-full sm:w-120">
                         Curated tools, technologies, and resources for developers building modern software.
                     </p>
@@ -25,30 +28,37 @@ const Footer = () => {
                         <a href="" className="hover:underline">Linkedin</a>
                     </div>
                 </div>
+
                 <div className="hidden sm:block">
-                    <h2 className="text-lg font-medium">Product</h2>
-                    <p className="text-gray-500">Home</p>
-                    <p className="text-gray-500">Technologies</p>
-                    <p className="text-gray-500">Projects</p>
+                    <h2 className="text-lg font-medium mb-2">Product</h2>
+                    <ul className="flex flex-col gap-1">
+                        <li><a href="/" className="text-gray-500 hover:underline">Home</a></li>
+                        <li><a href="/technologies" className="text-gray-500 hover:underline">Technologies</a></li>
+                        <li><a href="/projects" className="text-gray-500 hover:underline">Projects</a></li>
+                    </ul>
                 </div>
                 <div className="hidden sm:block">
-                    <h2 className="text-lg font-medium">Company</h2>
-                    <p className="text-gray-500">About</p>
-                    <p className="text-gray-500">Contact</p>
-                    <p className="text-gray-500">Careers</p>
+                    <h2 className="text-lg font-medium mb-2">Company</h2>
+                    <ul className="flex flex-col gap-1">
+                        <li><a href="/about" className="text-gray-500 hover:underline">About</a></li>
+                        <li><a href="/contact" className="text-gray-500 hover:underline">Contact</a></li>
+                        <li><a href="/careers" className="text-gray-500 hover:underline">Careers</a></li>
+                    </ul>
                 </div>
                 <div className="hidden sm:block">
-                    <h2 className="text-lg font-medium">Legal</h2>
-                    <p className="text-gray-500">Privacy Policy</p>
-                    <p className="text-gray-500">Terms of Service</p>
+                    <h2 className="text-lg font-medium mb-2">Legal</h2>
+                    <ul className="flex flex-col gap-1">
+                        <li><a href="/privacy" className="text-gray-500 hover:underline">Privacy Policy</a></li>
+                        <li><a href="/terms" className="text-gray-500 hover:underline">Terms of Service</a></li>
+                    </ul>
                 </div>
             </div>
 
             <div className="flex flex-row justify-between items-center gap-2 pt-5 border-t border-gray-200 text-xs sm:text-sm">
                 <p className="text-gray-500">&copy; {year} Dev Stack. All rights reserved.</p>
                 <div className="flex gap-3 text-gray-500 shrink-0">
-                    <a href="" className="hover:underline">Privacy</a>
-                    <a href="" className="hover:underline">Terms</a>
+                    <a href="/privacy" className="hover:underline">Privacy</a>
+                    <a href="/terms" className="hover:underline">Terms</a>
                 </div>
             </div>
         </footer>
